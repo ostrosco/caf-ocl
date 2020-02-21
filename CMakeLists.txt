@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.1)
+project(clCAF)
+
+if (NOT DEFINED CLCAF_VERSION_MAJOR)
+  set(CLCAF_VERSION_MAJOR 0)
+endif()
+
+if (NOT DEFINED CLCAF_VERSION_MINOR)
+  set(CLCAF_VERSION_MINOR 1)
+endif()
+
+if (NOT DEFINED CLCAF_VERSION_PATCH)
+  set(CLCAF_VERSION_PATCH 0)
+endif()
+
+set(CLCAF_VERSION "${CLCAF_VERSION_MAJOR}.${CLCAF_VERSION_MINOR}.${CLCAF_VERSION_PATCH}")
+
+set(CLCAF_SOVERSION 0)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
+
+find_package(OpenCL)
+find_package(clFFT)
+
+add_subdirectory(sources)

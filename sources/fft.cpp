@@ -140,10 +140,7 @@ main(void)
   cl_context_properties props[3] = { CL_CONTEXT_PLATFORM, 0, 0 };
   cl_context ctx = 0;
   cl_command_queue queue = 0;
-  cl_mem bufX;
   float* X;
-  cl_event event = NULL;
-  int ret = 0;
   size_t N = 16;
   cl_caf_plan* caf_plan;
 
